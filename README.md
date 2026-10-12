@@ -25,7 +25,7 @@ The current pages use the supplied responsive Vimeo owner embed code, including 
 
 ## EBS integration
 
-The pages are saved locally and have not been published to `ebs.ee`. When integrating into the EBS CMS, use its existing header, footer, navigation, font assets, and consent system around the page content. The standalone header intentionally links to EBS and BRIDGE without reproducing the full site's menu functionality. Both the BRIDGE text and logo link to [the KU Leuven BRIDGE project page](https://feb.kuleuven.be/drc/LEER/bridge-project). Page headings, browser titles, breadcrumbs, and social titles follow the current titles in `spec.md`: “Majandus- ja sotsiaalteaduse õppematerjalid” and “Loodusteaduse õppematerjalid”.
+The pages are saved locally and have not been published to `ebs.ee`. When integrating into the EBS CMS, use its existing header, footer, navigation, font assets, and consent system around the page content. The standalone header intentionally links to EBS and BRIDGE without reproducing the full site's menu functionality. Both the BRIDGE text and logo link to [the KU Leuven BRIDGE project page](https://feb.kuleuven.be/drc/LEER/bridge-project/about_bridge). Page headings, browser titles, breadcrumbs, and social titles follow the current titles in `spec.md`: “Majandus- ja sotsiaalteaduse õppematerjalid” and “Loodusteaduse õppematerjalid”.
 
 Map the pages to the agreed ECO and NAT routes and distribute only the assigned route to each group. There are no links between the series, copy-link buttons, external video catalogue links, or recommendations. Each page includes `noindex, nofollow, noarchive`; keep both out of site search, sitemaps, and public navigation.
 
