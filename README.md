@@ -4,16 +4,18 @@ Two separate local, buildless HTML pages for ECO and NAT RCT groups, with Estoni
 
 ## Open the pages
 
-- [ECO page](eco.html)
-- [NAT page](nat.html)
+- [ECO page](d7fc3b47e1894c0d879006c795d5ad59.html)
+- [NAT page](3b443180799f44888087674293e1342a.html)
 
-Open either HTML file directly in a browser. Keep `styles.css`, `video-menu.js`, and `assets/` beside the pages. No installation or build is required. For an HTTP preview, run `python -m http.server 8000 --bind 127.0.0.1` from this directory, then visit `http://127.0.0.1:8000/eco.html` or `http://127.0.0.1:8000/nat.html`.
+The HTML filenames are independent random 32-character hexadecimal identifiers; the old `eco.html` and `nat.html` files have been renamed and are not retained as aliases. This README is an administrative mapping and must not be deployed as a participant page.
+
+Open either HTML file directly in a browser. Keep `styles.css`, `video-menu.js`, `qr-modal.js`, and `assets/` beside the pages. No installation or build is required. For an HTTP preview, run `python -m http.server 8000 --bind 127.0.0.1` from this directory, then visit `http://127.0.0.1:8000/d7fc3b47e1894c0d879006c795d5ad59.html` or `http://127.0.0.1:8000/3b443180799f44888087674293e1342a.html`.
 
 Each page has a five-topic left menu and displays one video panel at a time: video 1 has a Vimeo embed, and videos 2–5 have placeholders. Selecting a topic replaces the video and its guide text in place. Inactive panels stay hidden; switching away unloads the player to stop audio. Valid `#video-N` URLs select a topic, and invalid hashes fall back to video 1. The supplied owner embed titles establish the correct assignment: ECO `1233985619` with hash `0302faf13d`; NAT `1233990496` with hash `5da111e989`. Titles, introduction, and descriptions come from [opetaja_juhend_videod.md](../opetaja_juhend_videod.md) and are recorded in the [specification](../spec.md). The pages preserve the Markdown guide's wording and emphasis. Each video includes its full guide section, with exercises, discussion prompts, and bullet lists. The grade 11 audience line, introductory paragraph, usage instructions, and usage-plan table appear before the videos.
 
-## Projector QR link
+## Projector QR modal
 
-The chatbot instruction in “Kuidas videoseeriat kasutada” links to `assets/qr_bot.png` in a new tab, displaying the image by itself for projection. This file is a byte-identical copy of the supplied `../qr_bot.png`. Keep it with the website assets. The Markdown guide links directly to its neighbouring `qr_bot.png`.
+The chatbot instruction in “Kuidas videoseeriat kasutada” is a button that opens `assets/qr_bot.png` in a large native modal dialog on the current page. The grey backdrop dims the page and blocks background interaction; scrolling is locked while the QR is open. Close it with “Sulge”, Escape, or a click outside the dialog. Focus returns to the instruction button, and the selected video is preserved. The supplied QR image has been moved into `assets/qr_bot.png`; there is no duplicate in the specification folder. Keep it with the website assets. The Markdown guide links to `website/assets/qr_bot.png`.
 
 ## Replace a placeholder
 
@@ -23,7 +25,7 @@ The current pages use the supplied responsive Vimeo owner embed code, including 
 
 ## EBS integration
 
-The pages are saved locally and have not been published to `ebs.ee`. When integrating into the EBS CMS, use its existing header, footer, navigation, font assets, and consent system around the page content. The standalone header intentionally links to EBS and BRIDGE without reproducing the full site's menu functionality.
+The pages are saved locally and have not been published to `ebs.ee`. When integrating into the EBS CMS, use its existing header, footer, navigation, font assets, and consent system around the page content. The standalone header intentionally links to EBS and BRIDGE without reproducing the full site's menu functionality. Both the BRIDGE text and logo link to [the KU Leuven BRIDGE project page](https://feb.kuleuven.be/drc/LEER/bridge-project). Page headings, browser titles, breadcrumbs, and social titles follow the current titles in `spec.md`: “Majandus- ja sotsiaalteaduse õppematerjalid” and “Loodusteaduse õppematerjalid”.
 
 Map the pages to the agreed ECO and NAT routes and distribute only the assigned route to each group. There are no links between the series, copy-link buttons, external video catalogue links, or recommendations. Each page includes `noindex, nofollow, noarchive`; keep both out of site search, sitemaps, and public navigation.
 
